@@ -1,5 +1,5 @@
 <?php
-require_once "../jssdk/jssdk.php"; //表示主机根目录下jssdk文件夹内jssdk.php文件
+require_once "./jssdk.php"; //表示主机根目录下jssdk文件夹内jssdk.php文件
 $jssdk = new JSSDK("wxca70a66fc996c259", "986a21558a4bd4d742b4e8dbffc49361");//填写开发者中心你的开发者ID
 $signPackage = $jssdk->GetSignPackage();
 ?>
