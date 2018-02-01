@@ -11,8 +11,7 @@
  // 获取code码，用于和微信服务器申请token。 注：依据OAuth2.0要求，此处授权登录需要用户端操作
  if(!isset($_GET['code']) && !isset($_SESSION['code'])){
   echo
-  '<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid='.$appid.'
-  &redirect_uri='.$url.'&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect">
+  '<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid='.$appid.'&redirect_uri='.$url.'&response_type=code&scope=snsapi_userinfo&state=asdf#wechat_redirect">
   <font style="font-size:30">授权</font></a>';
    
   exit;
