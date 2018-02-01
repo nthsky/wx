@@ -114,10 +114,7 @@ $signPackage = $jssdk->GetSignPackage();
       // 用户取消分享后执行的回调函数
       }
     });
-
     
-  });
-  document.getElementById('image').onclick = function(){
     wx.onMenuShareQZone({
       title: '震惊', // 分享标题
       desc: '某男子XXXXXX', // 分享描述
@@ -130,7 +127,11 @@ $signPackage = $jssdk->GetSignPackage();
       // 用户取消分享后执行的回调函数
       }
     });
-  };
+    
+  });
+
+    
+
 
 </script>
 </html>
