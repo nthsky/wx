@@ -26,7 +26,7 @@ $signPackage = $jssdk->GetSignPackage();
    * 邮件内容说明：用简明的语言描述问题所在，并交代清楚遇到该问题的场景，可附上截屏图片，微信团队会尽快处理你的反馈。
    */
   wx.config({
-    debug: false,
+    debug: true,
     appId: '<?php echo $signPackage["appId"];?>',
     timestamp: <?php echo $signPackage["timestamp"];?>,
     nonceStr: '<?php echo $signPackage["nonceStr"];?>',
@@ -59,7 +59,7 @@ $signPackage = $jssdk->GetSignPackage();
     wx.onMenuShareTimeline({
       title: '震惊', // 分享标题
       link: 'http://www.nthsky.top/shareDemo.php', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
-      imgUrl: './fengmian.jpeg', // 分享图标
+      imgUrl: './fengmian.png', // 分享图标
       success: function () {
       // 用户确认分享后执行的回调函数
       },
@@ -72,7 +72,7 @@ $signPackage = $jssdk->GetSignPackage();
       title: '震惊', // 分享标题
       desc: '某男子XXXXXX', // 分享描述
       link: 'http://www.nthsky.top/shareDemo.php', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
-      imgUrl: './fengmian.jpeg', // 分享图标
+      imgUrl: './fengmian.png', // 分享图标
       type: '', // 分享类型,music、video或link，不填默认为link
       dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
       success: function () {
@@ -87,7 +87,7 @@ $signPackage = $jssdk->GetSignPackage();
       title: '震惊', // 分享标题
       desc: '某男子XXXXXX', // 分享描述
       link: 'http://www.nthsky.top/shareDemo.php', // 分享链接
-      imgUrl: './fengmian.jpeg', // 分享图标
+      imgUrl: './fengmian.png', // 分享图标
       success: function () {
       // 用户确认分享后执行的回调函数
       },
@@ -100,7 +100,7 @@ $signPackage = $jssdk->GetSignPackage();
       title: '震惊', // 分享标题
       desc: '某男子XXXXXX', // 分享描述
       link: 'http://www.nthsky.top/shareDemo.php', // 分享链接
-      imgUrl: './fengmian.jpeg', // 分享图标
+      imgUrl: './fengmian.png', // 分享图标
       success: function () {
       // 用户确认分享后执行的回调函数
       },
