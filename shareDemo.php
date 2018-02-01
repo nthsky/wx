@@ -11,9 +11,10 @@ $signPackage = $jssdk->GetSignPackage();
 </head>
 <body>
   <div>测试</div>
-  <img src="http://www.nthsky.top/fengmian.jpeg">
+  <img id = 'image' src="http://www.nthsky.top/fengmian.jpeg">
 </body>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+
 <script>
   /*
    * 注意：
@@ -114,6 +115,10 @@ $signPackage = $jssdk->GetSignPackage();
       }
     });
 
+    
+  });
+  a = document.getELementById('image');
+  a.onclick = function(){
     wx.onMenuShareQZone({
       title: '震惊', // 分享标题
       desc: '某男子XXXXXX', // 分享描述
@@ -126,6 +131,7 @@ $signPackage = $jssdk->GetSignPackage();
       // 用户取消分享后执行的回调函数
       }
     });
-  });
+  };
+
 </script>
 </html>
