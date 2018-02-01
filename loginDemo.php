@@ -11,14 +11,14 @@
  // 获取code码，用于和微信服务器申请token。 注：依据OAuth2.0要求，此处授权登录需要用户端操作
  if(!isset($_GET['code']) && !isset($_SESSION['code'])){
   echo
-  '<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid='.$appid.'&redirect_uri='.$url.'&response_type=code&scope=snsapi_userinfo&state=asdf#wechat_redirect">
+  '<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid='.$appid.'&redirect_uri='.$url.'&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect">
   <font style="font-size:30">授权</font></a>';
    
   exit;
  }
   
  // 依据code码去获取openid和access_token，自己的后台服务器直接向微信服务器申请即可
- if (isset($_GET['code']) && !isset($_SESSION['token'])){
+ if (isset($_GET['code']) && !isset($_SESSION['code'])){
   $_SESSION['code'] = $_GET['code'];
    
   $url="https://api.weixin.qq.com/sns/oauth2/access_token?appid=".$appid.
@@ -28,7 +28,7 @@
   $_SESSION['token'] = $res;
  }
   
- print_r($_SESSION);
+ // print_r($_SESSION);
   
  // 依据申请到的access_token和openid，申请Userinfo信息。
  if (isset($_SESSION['token']['access_token'])){
