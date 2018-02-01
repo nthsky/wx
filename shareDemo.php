@@ -39,7 +39,8 @@ $signPackage = $jssdk->GetSignPackage();
       'onMenuShareTimeline',
       'onMenuShareAppMessage',
       'onMenuShareQQ',
-      'onMenuShareWeibo'
+      'onMenuShareWeibo',
+      'onMenuShareQZone'
     ]
   });
   wx.ready(function () {
@@ -101,6 +102,19 @@ $signPackage = $jssdk->GetSignPackage();
     });
 
     wx.onMenuShareWeibo({
+      title: '震惊', // 分享标题
+      desc: '某男子XXXXXX', // 分享描述
+      link: 'http://www.nthsky.top/shareDemo.php', // 分享链接
+      imgUrl: 'http://www.nthsky.top/fengmian.jpeg', // 分享图标
+      success: function () {
+      // 用户确认分享后执行的回调函数
+      },
+      cancel: function () {
+      // 用户取消分享后执行的回调函数
+      }
+    });
+
+    wx.onMenuShareQZone({
       title: '震惊', // 分享标题
       desc: '某男子XXXXXX', // 分享描述
       link: 'http://www.nthsky.top/shareDemo.php', // 分享链接
