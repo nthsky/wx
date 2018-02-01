@@ -38,8 +38,7 @@ $signPackage = $jssdk->GetSignPackage();
       'onMenuShareTimeline',
       'onMenuShareAppMessage',
       'onMenuShareQQ',
-      'onMenuShareWeibo',
-
+      'onMenuShareWeibo'
     ]
   });
   wx.ready(function () {
@@ -50,7 +49,7 @@ $signPackage = $jssdk->GetSignPackage();
     });
 
     wx.checkJsApi({
-      jsApiList: ['chooseImage'], // 需要检测的JS接口列表，所有JS接口列表见附录2,
+      jsApiList: [], // 需要检测的JS接口列表，所有JS接口列表见附录2,
       success: function(res) {
       // 以键值对的形式返回，可用的api值true，不可用为false
       // 如：{"checkResult":{"chooseImage":true},"errMsg":"checkJsApi:ok"}
@@ -60,7 +59,7 @@ $signPackage = $jssdk->GetSignPackage();
     wx.onMenuShareTimeline({
       title: '震惊', // 分享标题
       link: 'http://www.nthsky.top/shareDemo.php', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
-      imgUrl: 'http://www.nthsky.top/fengmian.jpeg', // 分享图标
+      imgUrl: './fengmian.jpeg', // 分享图标
       success: function () {
       // 用户确认分享后执行的回调函数
       },
@@ -73,7 +72,7 @@ $signPackage = $jssdk->GetSignPackage();
       title: '震惊', // 分享标题
       desc: '某男子XXXXXX', // 分享描述
       link: 'http://www.nthsky.top/shareDemo.php', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
-      imgUrl: 'http://www.nthsky.top/fengmian.jpeg', // 分享图标
+      imgUrl: './fengmian.jpeg', // 分享图标
       type: '', // 分享类型,music、video或link，不填默认为link
       dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
       success: function () {
@@ -88,7 +87,7 @@ $signPackage = $jssdk->GetSignPackage();
       title: '震惊', // 分享标题
       desc: '某男子XXXXXX', // 分享描述
       link: 'http://www.nthsky.top/shareDemo.php', // 分享链接
-      imgUrl: 'http://www.nthsky.top/fengmian.jpeg', // 分享图标
+      imgUrl: './fengmian.jpeg', // 分享图标
       success: function () {
       // 用户确认分享后执行的回调函数
       },
@@ -101,7 +100,7 @@ $signPackage = $jssdk->GetSignPackage();
       title: '震惊', // 分享标题
       desc: '某男子XXXXXX', // 分享描述
       link: 'http://www.nthsky.top/shareDemo.php', // 分享链接
-      imgUrl: 'http://www.nthsky.top/fengmian.jpeg', // 分享图标
+      imgUrl: './fengmian.jpeg', // 分享图标
       success: function () {
       // 用户确认分享后执行的回调函数
       },
