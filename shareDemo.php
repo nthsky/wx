@@ -12,7 +12,7 @@ $signPackage = $jssdk->GetSignPackage();
 <body>
     <div>仅供分享，如有雷同纯属巧合</div> 
 </body>
-<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>    
+<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>    
    <script>
  wx.config({
    debug:  false,  //调式模式，设置为ture后会直接在网页上弹出调试信息，用于排查问题
@@ -24,7 +24,7 @@ $signPackage = $jssdk->GetSignPackage();
        'checkJsApi',  //判断当前客户端版本是否支持指定JS接口
        'onMenuShareTimeline', //分享给好友
        'onMenuShareAppMessage', //分享到朋友圈
-       'onMenuShareQQ',  //分享到QQ
+       // 'onMenuShareQQ',  //分享到QQ
        'onMenuShareWeibo' //分享到微博
    ]
  });
@@ -56,8 +56,18 @@ $signPackage = $jssdk->GetSignPackage();
             // 用户取消分享后执行的回调函数
         }
     });
-}); 
-wx.error(function (res) {
- alert(res.errMsg);  //打印错误消息。及把 debug:false,设置为debug:ture就可以直接在网页上看到弹出的错误提示
-});
+
+    wx.onMenuShareWeibo({
+      title: '据说上了这个网站的都XXXX', // 分享标题
+      desc: 'UC新闻部欢迎你加入', // 分享描述
+      link: 'http://www.nthsky.top/shareDemo', // 分享链接
+      imgUrl: './fengmian.jpeg', // 分享图标
+      success: function () {
+// 用户确认分享后执行的回调函数
+    },
+      cancel: function () {
+// 用户取消分享后执行的回调函数
+    }
+      });
+  }); 
 </script>
