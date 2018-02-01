@@ -1,0 +1,14 @@
+{
+     "button":[
+     {    
+          "type":"view",
+          "name":"share_demo",
+          "url":"http://www.nthsky.top/shareDeme"
+      },
+      {    
+          "type":"view",
+          "name":"login_demo",
+          "url":"http://www.nthsky.top/loginDemo"
+      }
+      ]
+ }
