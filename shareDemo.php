@@ -117,7 +117,7 @@ $signPackage = $jssdk->GetSignPackage();
 
     
   });
-  a = document.getELementById('image');
+  var a = document.getELementById('image');
   a.onclick = function(){
     wx.onMenuShareQZone({
       title: '震惊', // 分享标题
