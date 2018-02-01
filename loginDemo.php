@@ -1,7 +1,7 @@
 <?php
  
  // 回调地址
- $url = urlencode("www.nthsky.top/loginDemo.php");
+ $url = urlencode("http://www.nthsky.top/loginDemo.php");
  // 公众号的id和secret
  $appid = 'wxca70a66fc996c259';
  $appsecret = '986a21558a4bd4d742b4e8dbffc49361';
