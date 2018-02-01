@@ -11,7 +11,7 @@ $signPackage = $jssdk->GetSignPackage();
 </head>
 <body>
   <div>测试</div>
-  <img id = 'image' src="http://www.nthsky.top/fengmian.jpeg">
+  <img id='image' src="http://www.nthsky.top/fengmian.jpeg">
 </body>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 
@@ -117,8 +117,7 @@ $signPackage = $jssdk->GetSignPackage();
 
     
   });
-  var a = document.getELementById('image');
-  a.onclick = function(){
+  document.getELementById('image').onclick = function(){
     wx.onMenuShareQZone({
       title: '震惊', // 分享标题
       desc: '某男子XXXXXX', // 分享描述
