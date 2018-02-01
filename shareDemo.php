@@ -11,7 +11,7 @@ $signPackage = $jssdk->GetSignPackage();
 </head>
 <body>
   <div>测试</div>
-  <img src="http://www.nthsky.com/fengmian.jpeg">
+  <img src="http://www.nthsky.top/fengmian.jpeg">
 </body>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 <script>
